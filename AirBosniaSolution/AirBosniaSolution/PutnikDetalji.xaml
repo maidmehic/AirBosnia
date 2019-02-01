@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirBosniaSolution.PutnikDetalji">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ime:* " Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Entry x:Name="txtIme" Grid.Row="0" Grid.Column="1" />
+
+                <Label Text="Prezime:* " Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Entry x:Name="txtPrezime" Grid.Row="1" Grid.Column="1" />
+
+                <Label Text="Datum rođenja:* " Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" />
+                <DatePicker x:Name="txtDatumRodenja" Grid.Row="2" Grid.Column="1" />
+
+                <Label Text="Spol:* " Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Picker x:Name="pickerSpol" Grid.Row="3" Grid.Column="1" />
+
+                <Label Text="Tip putnika:* " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Picker x:Name="pickerTipPutnika" Grid.Row="4" Grid.Column="1" />
+
+                <Label Text="Tip dokumenta:* " Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Picker x:Name="pickerTipDokumenta" Grid.Row="5" Grid.Column="1" />
+
+                <Label Text="Broj dokumenta:* " Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Entry x:Name="txtBrojDokumenta" Grid.Row="6" Grid.Column="1" />
+
+                <Label Text="Šjediste:" Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Picker x:Name="pickerSjediste" Grid.Row="7" Grid.Column="1" />
+                
+                <Label IsVisible="False" x:Name="LabelPovratakSjediste" Text="Šjediste za povratak:" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" />
+                <Picker IsVisible="False" x:Name="pickerSjedistePovratak" Grid.Row="8" Grid.Column="1" />
+
+                <StackLayout IsVisible="True" x:Name="errorLayout" Grid.Row="10" Grid.Column="1">
+                    <Label x:Name="errorLabel" HorizontalOptions="Center" TextColor="Red" ></Label>
+                </StackLayout>
+
+                <Button Grid.Row="9" Grid.Column="1" Text="Procesiraj" x:Name="btnProcesiraj" Clicked="BtnProcesiraj_Clicked"></Button>
+                
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

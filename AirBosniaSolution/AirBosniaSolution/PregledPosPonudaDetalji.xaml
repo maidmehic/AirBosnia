@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirBosniaSolution.PregledPosPonudaDetalji">
+    <ContentPage.Content>
+        <ScrollView>
+            
+      
+        <StackLayout Padding="20">
+
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="Small" Text="Destinacija: "></Label>
+                    <Label FontSize="Small"  x:Name="txtDestinacija"></Label>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Small" Text="Polazak: "></Label>
+                    <Label FontSize="Small" x:Name="txtPolazak"></Label>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Small" Text="Datum polaska: "></Label>
+                    <Label FontSize="Small" x:Name="txtDatumPolaska"></Label>
+            </StackLayout> 
+            
+            <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Small" Text="Datum povratka: "></Label>
+                    <Label FontSize="Small" x:Name="txtDatumPovratka"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Small" Text="Cijena aranžmana: "></Label>
+                    <Label FontSize="Small" x:Name="txtCijena"></Label>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Small" Text="Cijena za djecu do 12god: "></Label>
+                    <Label FontSize="Small" x:Name="txtCijenaCjeca"></Label>
+            </StackLayout>
+
+            <StackLayout Margin="0,30,0,30">
+                <Label Text="Informacije o smještaju" FontAttributes="Bold"></Label>
+                <Label x:Name="txtSmjestak"></Label>
+            </StackLayout>
+            
+            <StackLayout >
+                <Label Text="Program putovanja" FontAttributes="Bold"></Label>
+                <Label x:Name="txtNapomena"></Label>
+            </StackLayout>
+
+            <StackLayout >
+                <Button Text="Rezervacija" x:Name="btnRezervacija" Clicked="BtnRezervacija_Clicked"></Button>
+            </StackLayout>
+
+         </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

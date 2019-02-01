@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirBosniaSolution.PregledPosebnihPonuda">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+
+            <ListView x:Name="ponudeList" RowHeight="150" ItemTapped="PonudeList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout >
+                                <StackLayout Orientation="Horizontal" Padding="0,20,0,0" HorizontalOptions="Center">
+                                    <Image Source="maps.png"></Image>
+                                    <Label Text="{Binding Destinacija}" FontAttributes="Bold"></Label>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="Center">
+                                    <Image Source="calendar1.png"></Image>
+                                    <Label Text="{Binding DatumDaniNocenja}"></Label>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Padding="5" HorizontalOptions="Center">
+                                    <Image Source="bed1.png"></Image>
+                                    <Label Text=" + "></Label>
+                                    <Image Source="airplane1.png"></Image>
+                                    <Label Text=" + "></Label>
+                                    <Image Source="restaurant1.png"></Image>
+                                    <Label Text="{Binding Cijena, StringFormat='{0} KM'}"></Label>
+                                </StackLayout>
+
+                            </StackLayout>
+
+                         
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

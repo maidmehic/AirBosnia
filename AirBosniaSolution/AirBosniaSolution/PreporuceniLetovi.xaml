@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirBosniaSolution.PreporuceniLetovi">
+    <ContentPage.Content>
+        <StackLayout Padding="20" >
+
+            <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="CenterAndExpand">
+                <Label Text="Klasa putovanja:" VerticalTextAlignment="Center" ></Label>
+                <Picker x:Name="klasaPicker" SelectedIndexChanged="KlasaPicker_SelectedIndexChanged"></Picker>
+            </StackLayout>
+
+           
+                <ListView x:Name="letoviList" RowHeight="100"  ItemTapped="LetoviList_ItemTapped">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                <StackLayout Grid.Column="0" HorizontalOptions="Center" Orientation="Horizontal">
+                                    <StackLayout Grid.Column="1" Padding="10" >
+                                        <Label Text="{Binding DatumPolaska}" HorizontalOptions="Center"></Label>
+                                        <Label Text="{Binding VrijemePolaska}" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                        <Label Text="{Binding polaziste}"  HorizontalOptions="Center"></Label>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="2" Padding="10">
+                                        <Image Source="black_plane.png" Margin="0,25,0,0" HorizontalOptions="Center"></Image>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="3" Padding="10" >
+                                        <Label Text="{Binding DatumDolaska}"  HorizontalOptions="Center"></Label>
+                                        <Label Text="{Binding VrijemeDolaska}" FontAttributes="Bold"   HorizontalOptions="Center"></Label>
+                                        <Label Text="{Binding odrediste}"  HorizontalOptions="Center"></Label>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="4" Padding="10" VerticalOptions="Center">
+                                        <Label  Text="Cijene" HorizontalOptions="Center" FontSize="10" ></Label>
+                                        <Label  Text="{Binding CijenaOdrasli, StringFormat='Odrasli: {0} KM'}" HorizontalOptions="Center" FontSize="10"></Label>
+                                        <Label Text="{Binding CijenaDjeca, StringFormat='Djeca: {0} KM'}" HorizontalOptions="Center" FontSize="10"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                    
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            
+            
+
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

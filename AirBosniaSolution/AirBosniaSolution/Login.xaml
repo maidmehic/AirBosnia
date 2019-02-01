@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirBosniaSolution.Login">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20">
+            <Image Source="logo_slika.png" Margin="0,30,0,0"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="0,-100,0,0">
+
+                <Entry Placeholder="Email" x:Name="txtEmail" />
+                <Entry Placeholder="Lozinka" IsPassword="True" x:Name="txtLozinka"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Button x:Name="btnPriava" Text="Prijava" Clicked="BtnPriava_Clicked" />
+                    <Button x:Name="btnRegistracija" Text="Registracija" Clicked="BtnRegistracija_Clicked" />
+                </StackLayout>
+
+                <StackLayout IsVisible="True" x:Name="errorLayout" HorizontalOptions="Center">
+                    <Label x:Name="errorLabel" HorizontalOptions="Center" TextColor="Red"  ></Label>
+                </StackLayout>
+            </StackLayout>
+
+            
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

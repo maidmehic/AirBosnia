@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AirBosniaSolution.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Polazište:" VerticalTextAlignment="Center"  Grid.Row="0" Grid.Column="0"></Label>
+                <Picker x:Name="PolazistePicker" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" SelectedIndexChanged="PolazistePicker_SelectedIndexChanged"></Picker>
+                
+                <Label Text="Destinacija:" VerticalTextAlignment="Center"  Grid.Row="1" Grid.Column="0"></Label>
+                <Picker x:Name="OdredistePicker" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" SelectedIndexChanged="OdredistePicker_SelectedIndexChanged"></Picker>
+
+                <Label Text="Datum polaska:" VerticalTextAlignment="Center"  Grid.Row="2" Grid.Column="0"></Label>
+                <DatePicker Grid.Row="2" x:Name="txtDatum" Grid.Column="1"></DatePicker>
+
+                <Label Text="  Povratna: " VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="2" HorizontalOptions="CenterAndExpand"></Label>
+                <Switch x:Name="swPovratak" Grid.Row="2" Grid.Column="3" Toggled="SwPovratak_Toggled"></Switch>
+
+                <Label  Text="Datum povratka:" VerticalTextAlignment="Center" IsVisible="False"  Grid.Row="3" Grid.Column="0" x:Name="datumPovratkaLabel"></Label>
+                <DatePicker Grid.Row="3" x:Name="txtDatumPovratak" IsVisible="False" Grid.Column="1"></DatePicker>
+
+                <Button Text="Pretraži letove" x:Name="btnPretraga" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Clicked="BtnPretraga_Clicked"></Button>
+            </Grid>
+          
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
